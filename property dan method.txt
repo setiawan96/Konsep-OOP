@@ -1,0 +1,30 @@
+Method adalah tindakan yang bisa dilakukan di dalam class. Jika menggunakan analogi class laptop kita, maka contoh method adalah:
+menghidupkan laptop, mematikan laptop, mengganti cover laptop, dan berbagai tindakan lain.
+
+
+<?php
+class laptop {
+   function hidupkan_laptop() {
+   //... isi dari method hidupkan_laptop
+   }
+ 
+   function matikan_laptop() {
+   //... isi dari method matikan_laptop
+   }
+ 
+   ... //isi dari class laptop
+}
+?>
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Property (atau disebut juga dengan atribut) adalah data yang terdapat dalam sebuah class. 
+Melanjutkan analogi tentang laptop, property dari laptop bisa berupa merk, warna, jenis processor, ukuran layar, dan lain-lain
+
+
+class laptop {
+   var $pemilik;
+   var $merk;
+   var $ukuran_layar;
+   // lanjutan isi dari class laptop...
+}
+?>
