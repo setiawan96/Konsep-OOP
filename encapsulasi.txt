@@ -1,0 +1,70 @@
+Enkapsulasi (encapsulation) adalah sebuah metoda untuk mengatur struktur class dengan cara menyembunyikan alur kerja dari class tersebut.
+
+dengan enkapsulasi, kita bisa memilih property dan method apa saja yang boleh diakses, dan mana yang tidak boleh diakses. 
+dengan menghalangi kode program lain untuk mengubah property tertentu, class menjadi lebih terintegrasi, dan menghindari kesalahan ketika seseorang ‘mencoba’ mengubahnya.
+
+public
+ ->Ketika sebuah property atau method dinyatakan sebagai public, maka seluruh kode program di luar class bisa mengaksesnya, termasuk class turunan
+ ----------------------------------------
+ class laptop {
+ 
+   // buat public property
+   public $pemilik;
+ 
+   // buat public method
+   public function hidupkan_laptop() {
+     return "Hidupkan Laptop";
+   }
+}
+----------------------------------------
+
+protected
+->Jika sebuah property atau method dinyatakan sebagai protected, 
+berarti property atau method tersebut tidak bisa diakses dari luar class, namun bisa diakses oleh class itu sendiri atau turunan class tersebut.
+----------------------------------------
+<?php
+ 
+// buat class laptop
+class laptop {
+ 
+   // buat protected property
+   protected $pemilik="Anto";
+ 
+   public function akses_pemilik() {
+      return $this->pemilik;
+   }
+   protected function hidupkan_laptop() {
+      return "Hidupkan Laptop";
+   }
+   public function paksa_hidup() {
+      return $this->hidupkan_laptop();
+   }
+}
+  
+// buat objek dari class laptop (instansiasi)
+$laptop_anto = new laptop();
+  
+// jalankan method akses_pemilik()
+echo $laptop_anto->akses_pemilik(); // "Anto"
+  
+// jalankan method paksa_hidup()
+echo $laptop_anto->paksa_hidup(); // "Hidupkan Laptop"
+?>
+
+-------------------------------------------------------------------
+
+private
+->Jika sebuah property atau method di-set sebagai private, maka satu-satunya yang bisa mengakses adalah class itu sendiri.
+Class lain tidak bisa mengaksesnya, termasuk class turunan.
+
+ -----------------------------------------------------------
+// buat class komputer
+class komputer {
+   
+   // property dengan hak akses protected
+   private $jenis_processor = "Intel Core i7-4790 3.6Ghz";
+   
+   public function tampilkan_processor() {
+     return $this->jenis_processor;
+   }
+}
