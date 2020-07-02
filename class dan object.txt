@@ -1,0 +1,23 @@
+<?php
+class Fruit {                                            fruit -> sebagai nama class
+  public $name;                                          $name -> property/variabel/atribut
+}
+$apple = new Fruit();                                    $apple = new fruit(); -> untuk menginisialisasi isi dari class fruit
+?>
+
+----------------------------------------------------
+
+class NamaClass {
+    String atribut1;
+    String atribut2;
+
+    void namaMethod(){ ... }
+    void namaMethodLain(){ ... }
+}
+
+
+Class merupakan kumpulan dari suatu fungsi-fungsi yang dibuat untuk suatu tujuan tertentu. Misalnya kita akan membuat sebuah Mobil. Maka yang perlu kita buatkan adalah beberapa class yang didalamnya berisi fungsi-fungsi yang dapat membuat Mobil itu dapat berjalan sebagaimana mestinya, misalnya class Roda, class Mesin, class Kerangka Mobil, class Body Mobil dan lain lain. Class masih merupakan sebuah konsep yang belum siap digunakan.
+
+
+Sedangkan Object adalah pemanfaatan dari class yang siap untuk digunakan, misalnya kita sudah membuat class Roda, yang di dalamnya itu berisi konsep bagaimana Roda itu bisa berjalan, bagaimana Roda itu bisa berputar dan lain-lain, jika semua konsep Roda sudah oke, barulah kita akan dirubah menjadi sebuah Roda yang siap untuk dipakai. Nah itulah yang dinamakan Object Roda
+
