@@ -1,0 +1,43 @@
+Static property dan static method adalah property (variabel) dan method (function) yang melekat kepada class, bukan kepada objek. K
+onsep static property memang ‘agak keluar’ dari konsep objek sebagai tempat melakukan proses, karena sebenarnya class hanya merupakan ‘blueprint’ saja.
+
+
+------------------------------------
+// static property
+public static $harga_beli;
+ 
+// static method
+public static function beli_laptop() {
+   //...isi method
+}
+---------------------------------------
+--------------------------------------------
+<?php
+// buat class laptop
+class laptop {
+   public $merk;
+   public $pemilik;
+   
+   // static property
+   public static $harga_beli;
+  
+   //static method
+   public static function beli_laptop() {
+     return "Beli laptop seharga Rp".self::$harga_beli;
+   }
+}
+  
+// set static property
+laptop::$harga_beli=4000000;
+  
+// panggil static method
+echo laptop::beli_laptop();
+?>
+-----------------------------
+Pada kode program PHP diatas, saya menggunakan perintah (self::$harga_beli,) untuk memanggil static property dari dalam class laptop itu sendiri.
+
+
+
+
+
+
